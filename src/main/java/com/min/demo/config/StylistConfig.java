@@ -20,16 +20,16 @@ import java.util.Random;
 public class StylistConfig {
 
     @Bean
-    CommandLineRunner start(ModelRepository modelRepository, StylistRepository stylisteRepository,
+    CommandLineRunner start(ModelRepository modelRepository, StylistRepository stylistRepository,
                             DocumentRepository documentRepository, RepositoryRestConfiguration restConfiguration) {
 
         return args -> {
             restConfiguration.exposeIdsFor(Model.class, Stylist.class);
-            stylisteRepository.save(new Stylist(null, "Ornella", null, null, null));
-            stylisteRepository.save(new Stylist(null, "Kevine", null, null, null));
-            stylisteRepository.save(new Stylist(null, "Megane", null, null, null));
+            stylistRepository.save(new Stylist(null, "Ornella", null, null, null));
+            stylistRepository.save(new Stylist(null, "Kevine", null, null, null));
+            stylistRepository.save(new Stylist(null, "Megane", null, null, null));
             Random rnd = new Random();
-            stylisteRepository.findAll().forEach(c -> {
+            stylistRepository.findAll().forEach(c -> {
                 for (int i = 0; i < 15; i++) {
                     Model m = new Model();
                     Document d = new Document();
