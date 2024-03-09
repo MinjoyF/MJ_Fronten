@@ -1,11 +1,10 @@
 package com.min.demo.repositories;
 
-import com.min.demo.entities.Styliste;
+import com.min.demo.entities.Stylist;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin("*")
 //@RepositoryRestResource
-public interface StylisteRepository extends JpaRepository<Styliste,Long> {
+public interface StylistRepository extends JpaRepository<Stylist,Long> {
 }

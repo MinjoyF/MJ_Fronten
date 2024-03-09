@@ -23,7 +23,7 @@ public class Document {
         private byte[] file;
 
         @ManyToOne
-        @JoinColumn(name = "styliste_id")
-        private Styliste styliste;
+        @JoinColumn(name = "stylist_id")
+        private Stylist stylist;
 
 }

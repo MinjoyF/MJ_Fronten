@@ -9,13 +9,13 @@ import javax.persistence.*;
 import java.util.Collection;
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor @ToString
-public class Styliste {
+public class Stylist {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private  String beschreibung;
-    @OneToMany(mappedBy = "styliste")
+    @OneToMany(mappedBy = "stylist")
     private Collection<Model> models;
-    @OneToMany(mappedBy = "styliste")
+    @OneToMany(mappedBy = "stylist")
     private Collection<Document> documents;
 }

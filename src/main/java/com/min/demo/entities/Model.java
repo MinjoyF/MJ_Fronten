@@ -25,6 +25,6 @@ public class Model {
     private boolean verfuegbar;
     private String photoName;
     @ManyToOne
-    private Styliste styliste;
+    private Stylist stylist;
 }
 
